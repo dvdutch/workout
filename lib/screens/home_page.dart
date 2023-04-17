@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workout/screens/legs_page.dart';
 
 import 'chest_page.dart';
 
@@ -33,6 +34,20 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(
               height: 8.0,
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LegsPage()),
+                );
+              },
+              child: Text(
+                'Legs',
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: Colors.white,
+                    ),
+              ),
             ),
           ],
         ),
